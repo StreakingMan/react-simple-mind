@@ -9,7 +9,9 @@
         "prepare": "husky install",
         "release:first": "standard-version -- --first-release",
         "release": "standard-version",
-        "test": "jest"
+        "test": "jest",
+        "npublish": "yarn build && tsc -d && npm publish",
+        "release&publish": "yarn release && yarn npublish"
     },
     "license": "ISC",
     "files": [

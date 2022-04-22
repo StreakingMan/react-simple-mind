@@ -19,6 +19,6 @@
         "emitDeclarationOnly": true,
         "jsx": "react-jsx"
     },
-    "include": ["./src", "./components"],
+    "include": ["./components"],
     "references": [{ "path": "./tsconfig.node.json" }]
 }
