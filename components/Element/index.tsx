@@ -1,11 +1,47 @@
-import React, { FC, useState } from 'react';
+import React, { FC, useEffect, useRef, useState } from 'react';
 import classnames from 'classnames';
 import style from './index.module.scss';
 import { ElementProps } from './interface';
 import { LinkIcon, ToggleIcon } from '../icons';
+import Line from '../Line';
 
-const Element: FC<ElementProps> = ({ data, position, className }) => {
+const Element: FC<ElementProps> = ({
+    data,
+    position,
+    className,
+    rowGap,
+    colGap,
+}) => {
     const [closed, setClosed] = useState<boolean>(false);
+    const listRef = useRef<HTMLDivElement>(null);
+    const [itemHeightList, setItemHeightList] = useState<number[]>([]);
+    const [regionHeight, setRegionHeight] = useState<number>(0);
+
+    useEffect(() => {
+        const list = listRef.current;
+        if (!list) return;
+        const updateHeight = () => {
+            const heightList: number[] = [];
+            let i = 0;
+            while (i < list.children.length) {
+                // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+                // @ts-ignore
+                heightList.push(list.children.item(i).scrollHeight);
+                i++;
+            }
+            setItemHeightList(heightList);
+            setRegionHeight(list.scrollHeight);
+        };
+        updateHeight();
+        const resizeObserver = new ResizeObserver(() => {
+            updateHeight();
+        });
+        resizeObserver.observe(list);
+        return () => {
+            resizeObserver.unobserve(list);
+        };
+    }, [listRef.current]);
+
     return (
         <div className={classnames(style.element, style[position])}>
             <div
@@ -35,16 +71,31 @@ const Element: FC<ElementProps> = ({ data, position, className }) => {
                 {data.url && position === 'right' && LinkIcon}
             </div>
             {!!data.children?.length && !closed && (
-                <div className={classnames(style.list)}>
-                    {data.children.map((ele, idx) => (
-                        <Element
-                            key={idx}
-                            data={ele}
-                            className={className}
-                            position={position}
-                        />
-                    ))}
-                </div>
+                <>
+                    <Line
+                        regionHeight={regionHeight}
+                        itemHeightList={itemHeightList}
+                        position={position}
+                        rowGap={rowGap}
+                        colGap={colGap}
+                    />
+                    <div
+                        ref={listRef}
+                        className={classnames(style.list)}
+                        style={{ gap: colGap }}
+                    >
+                        {data.children.map((ele, idx) => (
+                            <Element
+                                key={idx}
+                                data={ele}
+                                className={className}
+                                position={position}
+                                rowGap={rowGap}
+                                colGap={colGap}
+                            />
+                        ))}
+                    </div>
+                </>
             )}
         </div>
     );

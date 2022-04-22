@@ -6,7 +6,7 @@ import './App.css';
 function App() {
     return (
         <div>
-            <SimpleMind data={testData} gap={[64, 24]} />
+            <SimpleMind data={testData} gap={[64, 24]} lineWidth={4} />
             <SimpleMind
                 className={'demo2'}
                 elementClassName={'element'}

@@ -10,4 +10,6 @@ export interface SimpleMindProps {
     elementClassName?: string;
     layout?: 'singleSide' | 'doubleSide';
     gap?: number | number[];
+    lineColor?: string;
+    lineWidth?: number;
 }

@@ -10,7 +10,10 @@ export const testData: SimpleMindProps['data'] = {
                 {
                     title: 'element1-2',
                     children: [
-                        { title: 'element1-2-1', url: 'https://baidu.com' },
+                        {
+                            title: 'element1-2-1-哈哈哈哈啊哈哈 啊哈哈，element1-2-1-哈哈哈哈啊哈哈 啊哈哈',
+                            url: 'https://baidu.com',
+                        },
                         { title: 'element1-2-2' },
                     ],
                 },

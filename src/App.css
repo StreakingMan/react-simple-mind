@@ -1,9 +1,10 @@
 .demo2 {
-    margin-top: 200px;
+    margin-top: 72px;
 }
 
 .element {
     border: 1px solid gainsboro;
     border-radius: 8px;
     padding: 8px;
+    max-width: 200px;
 }

@@ -1,14 +1,13 @@
 .element {
     display: flex;
     align-items: center;
-    gap: var(--row-gap);
 
     .title {
         position: relative;
         .toggle {
             cursor: pointer;
             position: absolute;
-
+            z-index: 2;
             top: 0;
             height: 100%;
             opacity: 0;
@@ -28,7 +27,7 @@
     .list {
         display: flex;
         flex-direction: column;
-        gap: var(--col-gap);
+        transition: 0.3s;
     }
 
     &.left {

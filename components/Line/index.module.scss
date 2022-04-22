@@ -1,3 +1,13 @@
 .line {
-    //
+    overflow: visible;
+    transition: 0.3s;
+    svg {
+        position: absolute;
+        transition: 0.3s;
+        path {
+            transition: 0.3s;
+        }
+    }
+    &.left {
+    }
 }

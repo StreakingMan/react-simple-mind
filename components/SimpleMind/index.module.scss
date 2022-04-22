@@ -2,15 +2,19 @@
     position: relative;
 }
 
+.root {
+    //
+}
+
 .elementLayer {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: var(--row-gap);
     .listContainer {
         display: flex;
         flex-direction: column;
         gap: var(--col-gap);
+        justify-content: center;
         &.left {
             align-items: flex-end;
         }

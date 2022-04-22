@@ -15,18 +15,18 @@ export const LinkIcon = (
 export const ToggleIcon = (closed: boolean) => {
     return (
         <svg width="16" height="16">
-            <path d="M3 8 L13 8" stroke="currentColor" strokeWidth="1" />
-            {closed && (
-                <path d="M8 3 L8 13" stroke="currentColor" strokeWidth="1" />
-            )}
             <circle
                 cx="8"
                 cy="8"
                 r="7"
                 stroke="currentColor"
-                fill="transparent"
+                fill="white"
                 strokeWidth="1"
             />
+            <path d="M3 8 L13 8" stroke="currentColor" strokeWidth="1" />
+            {closed && (
+                <path d="M8 3 L8 13" stroke="currentColor" strokeWidth="1" />
+            )}
         </svg>
     );
 };
