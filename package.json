@@ -16,7 +16,7 @@
     "files": [
         "dist"
     ],
-    "types": "./dist/types/components/index.d.ts",
+    "types": "dist/types/index.d.ts",
     "main": "./dist/react-simple-mind.umd.js",
     "module": "./dist/react-simple-mind.es.js",
     "exports": {
