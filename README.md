@@ -40,18 +40,18 @@ yarn add react-simple-mind
 ```
 
 ```tsx
+import SimpleMind from 'react-simple-mind';
+import 'react-simple-mind/dist/style.css';
 function App() {
     return (
-        <div>
-            <SimpleMind
-                className={'demo2'}
-                elementClassName={'element'}
-                data={testData}
-                gap={[64, 24]}
-                lineWidth={4}
-                lineColor={'red'}
-            />
-        </div>
+        <SimpleMind
+            className={'demo2'}
+            elementClassName={'element'}
+            data={testData}
+            gap={[64, 24]}
+            lineWidth={4}
+            lineColor={'red'}
+        />
     );
 }
 ```
