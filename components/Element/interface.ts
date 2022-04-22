@@ -1,6 +1,7 @@
-import React from 'react';
+import { SimpleMindProps } from '../SimpleMind/interface';
 
 export interface ElementProps {
     className?: string;
-    children?: React.ReactNode;
+    data: SimpleMindProps['data'];
+    position: 'left' | 'right';
 }

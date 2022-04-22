@@ -6,5 +6,8 @@ interface Data {
 
 export interface SimpleMindProps {
     data: Data;
+    className?: string;
     elementClassName?: string;
+    layout?: 'singleSide' | 'doubleSide';
+    gap?: number | number[];
 }

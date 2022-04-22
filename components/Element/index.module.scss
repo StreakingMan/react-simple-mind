@@ -1,3 +1,56 @@
 .element {
-    //
+    display: flex;
+    align-items: center;
+    gap: var(--row-gap);
+
+    .title {
+        position: relative;
+        .toggle {
+            cursor: pointer;
+            position: absolute;
+
+            top: 0;
+            height: 100%;
+            opacity: 0;
+            box-sizing: border-box;
+            transition: 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        &:hover,
+        &.closed {
+            .toggle {
+                opacity: 1;
+            }
+        }
+    }
+    .list {
+        display: flex;
+        flex-direction: column;
+        gap: var(--col-gap);
+    }
+
+    &.left {
+        flex-direction: row-reverse;
+        .title {
+            .toggle {
+                right: 100%;
+            }
+        }
+        .list {
+            align-items: flex-end;
+        }
+    }
+    &.right {
+        flex-direction: row;
+        .title {
+            .toggle {
+                left: 100%;
+            }
+        }
+        .list {
+            align-items: flex-start;
+        }
+    }
 }

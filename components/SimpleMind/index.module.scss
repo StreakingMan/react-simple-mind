@@ -1,4 +1,29 @@
 .simpleMind {
+    position: relative;
+}
+
+.elementLayer {
     display: flex;
     align-items: center;
+    justify-content: center;
+    gap: var(--row-gap);
+    .listContainer {
+        display: flex;
+        flex-direction: column;
+        gap: var(--col-gap);
+        &.left {
+            align-items: flex-end;
+        }
+        &.right {
+            align-items: flex-start;
+        }
+    }
+}
+
+.lineLayer {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
 }
