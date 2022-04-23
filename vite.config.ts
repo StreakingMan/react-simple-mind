@@ -11,11 +11,7 @@ export default defineConfig({
         },
     },
     build: {
-        lib: {
-            entry: resolve(__dirname, 'components/index.tsx'),
-            name: 'ReactSimpleMind',
-            fileName: (format) => `react-simple-mind.${format}.js`,
-        },
+        outDir: './demo',
         rollupOptions: {
             // 确保外部化处理那些你不想打包进库的依赖
             external: ['react', 'react-dom'],
