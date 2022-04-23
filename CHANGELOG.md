@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.3](https://github.com/StreakingMan/react-simple-mind/compare/v0.0.2...v0.0.3) (2022-04-23)
+
+
+### Bug Fixes
+
+* 链接图标样式 ([589533e](https://github.com/StreakingMan/react-simple-mind/commit/589533e44e555acfe289649eeedc50f5d5b93936))
+
 ### [0.0.2](https://github.com/StreakingMan/react-simple-mind/compare/v0.0.1...v0.0.2) (2022-04-22)
 
 ### 0.0.1 (2022-04-22)
