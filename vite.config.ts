@@ -11,7 +11,7 @@ export default defineConfig({
         },
     },
     build: {
-        outDir: './demo',
+        outDir: './docs',
         rollupOptions: {
             // 确保外部化处理那些你不想打包进库的依赖
             external: ['react', 'react-dom'],
