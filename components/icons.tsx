@@ -2,7 +2,7 @@ import React from 'react';
 
 export const LinkIcon = (
     <svg
-        style={{ verticalAlign: 'bottom' }}
+        style={{ verticalAlign: 'middle' }}
         viewBox="0 0 1024 1024"
         width="18"
         height="18"
