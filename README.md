@@ -39,13 +39,27 @@ npm install --save react-simple-mind
 yarn add react-simple-mind
 ```
 
+```css
+.element {
+    border: 1px solid gainsboro;
+    border-radius: 8px;
+    padding: 8px;
+    max-width: 200px;
+}
+```
+
 ```tsx
 import SimpleMind from 'react-simple-mind';
 import 'react-simple-mind/dist/style.css';
+
+const testData = {
+    title: 'root',
+    children:[...]
+}
+
 function App() {
     return (
         <SimpleMind
-            className={'demo2'}
             elementClassName={'element'}
             data={testData}
             gap={[64, 24]}
