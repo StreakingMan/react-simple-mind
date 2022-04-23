@@ -2,6 +2,8 @@
 
 轻量配置化思维导图组件，适用于一些不需要编辑，只展示导图的场景
 
+[demo](https://blog.streakingman.com/react-simple-mind/)
+
 ![](demo.png)
 
 ## 配置项
