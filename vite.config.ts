@@ -10,6 +10,7 @@ export default defineConfig({
             localsConvention: 'camelCaseOnly',
         },
     },
+    base: '/react-simple-mind/',
     build: {
         outDir: './docs',
         rollupOptions: {
